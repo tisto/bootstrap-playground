@@ -70,19 +70,19 @@
     .navbar-fixed-top,
     .navbar-collapse {
       background: white;
+      border: 0px solid transparent;
     }
-    #slider {
-      background: url('slider-1.jpg') no-repeat;
-      height: 600px;
+    section.slider {
+      background: url('slider-1.jpg') center center no-repeat;
+      background-size:cover;
+      width: 100%;
+      padding: 20% 5%;
+      display: table;
+      margin: 0;
+      max-width: none;
+      background-color: #373B44;
+      height: 91vh;
       color: white;
-      font-weight: 100;
-    }
-    #slider span {
-      padding-top: 300px;
-      display: block;
-      width: 80%;
-      height: 80%;
-      margin: 0 auto;
     }
   </style>
 </head>
@@ -111,10 +111,10 @@
   </nav>
 
   <!-- SLIDER -->
-  <section id="slider">
-    <span>
+  <section class="slider">
+    <div class="inner">
       <h1>lorem ipsum</h1>
-    </span>
+    </div>
   </section>
 
   <section class="container">
