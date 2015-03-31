@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bootstrap Playground - Top Navigation Shrinking</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <style type="text/css">
+    .navbar-shrinking {
+	    height: 75px;
+	    -webkit-transition: 0.5s;
+	    -moz-transition: 0.5s;
+	    -ms-transition: 0.5s;
+	    transition: 0.5s;
+    }
+    .navbar-shrinking .navbar-right {
+	    padding-top: 12px;
+	    -webkit-transition: 0.5s;
+	    -moz-transition: 0.5s;
+	    -ms-transition: 0.5s;
+	    transition: 0.5s;
+    }
+    .navbar-brand {
+    	padding: 0px !important;
+    }
+    .navbar-brand img {
+	    max-height: 75px;
+	    -webkit-transition: 0.5s;
+	    -moz-transition: 0.5s;
+	    -ms-transition: 0.5s;
+	    transition: 0.5s;
+    }
+    .shrink {
+	    height: 50px;
+	    -webkit-transition: 0.5s;
+	    -moz-transition: 0.5s;
+	    -ms-transition: 0.5s;
+	    transition: 0.5s;
+    }
+    .shrink .navbar-right {
+	    padding-top: 0px;
+	    -webkit-transition: 0.5s;
+	    -moz-transition: 0.5s;
+	    -ms-transition: 0.5s;
+	    transition: 0.5s;
+    }
+    .shrink .navbar-brand img {
+	    max-height: 50px;
+	    -webkit-transition: 0.5s;
+	    -moz-transition: 0.5s;
+	    -ms-transition: 0.5s;
+	    transition: 0.5s;
+    }
+    body {
+    	min-height: 2000px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top navbar-shrinking" role="navigation">
+    <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#"><img src="logo.svg" /></a>
+	    </div>
+	    <div class="navbar-collapse collapse">
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	      <li><a href="../navbar/">Default</a></li>
+	      <li><a href="../navbar-static-top/">Static top</a></li>
+	      <li><a href="./">Fixed top</a></li>
+	      </ul>
+	    </div>
+    </div>
+  </nav>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(window).scroll(function() {
+	    if ($(document).scrollTop() > 150) {
+	    	$('.navbar').addClass('shrink');
+	    }
+	    else {
+	    	$('.navbar').removeClass('shrink');
+	    }
+    });
+  </script>
+</body>
+</html>
