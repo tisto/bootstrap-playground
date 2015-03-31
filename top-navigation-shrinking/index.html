@@ -26,6 +26,13 @@
 	    -ms-transition: 0.5s;
 	    transition: 0.5s;
     }
+    .navbar-shrinking .navbar-header button {
+      margin-top: 20px;
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -ms-transition: 0.5s;
+      transition: 0.5s;
+    }
     .navbar-brand {
     	padding: 0px !important;
     }
@@ -43,6 +50,9 @@
 	    -ms-transition: 0.5s;
 	    transition: 0.5s;
     }
+    .shrink .navbar-header button {
+      margin-top: 8px;
+    }
     .shrink .navbar-right {
 	    padding-top: 0px;
 	    -webkit-transition: 0.5s;
@@ -56,6 +66,23 @@
 	    -moz-transition: 0.5s;
 	    -ms-transition: 0.5s;
 	    transition: 0.5s;
+    }
+    .navbar-fixed-top,
+    .navbar-collapse {
+      background: white;
+    }
+    #slider {
+      background: url('slider-1.jpg') no-repeat;
+      height: 600px;
+      color: white;
+      font-weight: 100;
+    }
+    #slider span {
+      padding-top: 300px;
+      display: block;
+      width: 80%;
+      height: 80%;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -82,6 +109,13 @@
 	    </div>
     </div>
   </nav>
+
+  <!-- SLIDER -->
+  <section id="slider">
+    <span>
+      <h1>lorem ipsum</h1>
+    </span>
+  </section>
 
   <section class="container">
     <h1 id="one">One</h1>
